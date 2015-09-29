@@ -107,6 +107,7 @@
     <Compile Include="Dialogs\AboutDialog.xaml.cs">
       <DependentUpon>AboutDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\DeviceFamilyHelper.cs" />
     <Compile Include="Helper\MenuAttribute.cs" />
     <Compile Include="Helper\SampleDefinition.cs" />
     <Compile Include="MainPage.xaml.cs">
