@@ -16,6 +16,14 @@
             <TextBlock Text="Flyout" />
             <Button
                 Content="Open MenuFlyout">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Open"/>
+                        <MenuFlyoutItem Text="Save"/>
+                        <MenuFlyoutSeparator />
+                        <MenuFlyoutItem Text="Close"/>
+                    </MenuFlyout>
+                </Button.Flyout>
             </Button>
             
         </StackPanel>

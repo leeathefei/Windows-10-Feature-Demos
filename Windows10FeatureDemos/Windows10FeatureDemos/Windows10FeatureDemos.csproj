@@ -104,6 +104,7 @@
     <Compile Include="CustomTrigger\InteractionModeTrigger.cs" />
     <Compile Include="CustomTrigger\NetworkAvailableStateTrigger.cs" />
     <Compile Include="CustomTrigger\OrientationTrigger.cs" />
+    <Compile Include="Helper\DeviceFamilyHelper.cs" />
     <Compile Include="Helper\MenuAttribute.cs" />
     <Compile Include="Helper\SampleDefinition.cs" />
     <Compile Include="MainPage.xaml.cs">
