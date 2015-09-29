@@ -7,6 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.BottomAppBar>
+        <CommandBar
+            x:Name="commandBar">
+            <AppBarButton
+                Icon="Accept"
+                Label="appbarbutton" />
+            <AppBarButton
+                Icon="Cancel"
+                Label="appbarbutton" />
+        </CommandBar>
+    </Page.BottomAppBar>
+    
     <Page.Resources>
         <DataTemplate
             x:Key="MenuItemDataTemplate">
@@ -135,11 +147,13 @@
 
                 <Button
                     x:Name="_backButton"
-                    Click="_backButton_Click"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE0A6;"
+                    Width="48"
+                    Height="48"
+                    Click="_backButton_Click"
                     Background="Transparent"
-                    Visibility="{Binding BackButtonVisibility}" />
+                    Visibility="{Binding BackButtonVisibility, Source={StaticResource MainViewModel}}" />
 
                 <TextBlock
                     x:Name="_currentPageTitle"

@@ -80,15 +80,44 @@ namespace Windows10FeatureDemos.ViewModels
                 RootFrame.GoBack();
             }
 
-            sampleHistory.RemoveAt(sampleHistory.Count - 1);
-            this.PageHeader = sampleHistory[sampleHistory.Count - 1].Caption;
+            OnPropertyChanged("BackButtonVisibility");
+
+            if (sampleHistory.Count > 0)
+            {
+                sampleHistory.RemoveAt(sampleHistory.Count - 1);
+            }
+
+            if (sampleHistory.Count == 0)
+            {
+                this.PageHeader = "Start";
+            }
+            else
+            {
+                this.PageHeader = sampleHistory[sampleHistory.Count - 1].Caption;
+            }
+
         }
 
-        private Visibility BackButtonVisibility
+        public Visibility BackButtonVisibility
         {
             get
             {
-                
+                if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+                {
+                    return Visibility.Visible;
+                }
+
+                if (DeviceFamilyHelper.IsMobile)
+                {
+                    return Visibility.Collapsed;
+                }
+
+                if (RootFrame != null && RootFrame.CanGoBack)
+                {
+                    return Visibility.Visible;
+                }
+
+                return Visibility.Collapsed;
             }
         }
     }

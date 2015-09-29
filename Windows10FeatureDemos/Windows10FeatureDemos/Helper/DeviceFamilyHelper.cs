@@ -10,7 +10,7 @@ namespace Windows10FeatureDemos.Helper
     {
         private static string _deviceFamily;
 
-        public string DeviceFamily
+        public static string DeviceFamily
         {
             get
             {
@@ -29,9 +29,14 @@ namespace Windows10FeatureDemos.Helper
             }
         }
 
-        public bool IsDesktop
+        public static bool IsDesktop
         {
             get { return DeviceFamily == "Desktop"; }
+        }
+
+        public static bool IsMobile
+        {
+            get { return DeviceFamily == "Mobile"; }
         }
     }
 }

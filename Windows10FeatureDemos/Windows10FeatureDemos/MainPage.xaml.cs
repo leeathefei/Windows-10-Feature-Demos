@@ -3,6 +3,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows10FeatureDemos.Helper;
+using Windows10FeatureDemos.Views;
 
 namespace Windows10FeatureDemos
 {
@@ -15,6 +16,7 @@ namespace Windows10FeatureDemos
             this.Loaded += (s, e) =>
             {
                 App.MainViewModel.RootFrame = _rootFrame;
+                _rootFrame.Navigate(typeof(StartPage));
             };
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(
@@ -31,15 +33,15 @@ namespace Windows10FeatureDemos
             _splitView.IsPaneOpen = !_splitView.IsPaneOpen;
         }
 
-        private void _backButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void _mainMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             App.MainViewModel.ShowSample(_mainMenu.SelectedItem as SampleDefinition);
             _splitView.IsPaneOpen = false;
+        }
+
+        private void _backButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.MainViewModel.GoBack();
         }
     }
 }
