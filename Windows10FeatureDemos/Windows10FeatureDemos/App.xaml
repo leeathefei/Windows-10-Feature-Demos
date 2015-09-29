@@ -1,0 +1,13 @@
+﻿<Application
+    x:Class="Windows10FeatureDemos.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Windows10FeatureDemos"
+    xmlns:vms="using:Windows10FeatureDemos.ViewModels"
+    RequestedTheme="Light">
+    
+    <Application.Resources>
+        <vms:MainViewModel x:Key="MainViewModel" />
+    </Application.Resources>
+    
+</Application>

@@ -1,0 +1,177 @@
+﻿<Page
+    x:Class="Windows10FeatureDemos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Windows10FeatureDemos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate
+            x:Key="MenuItemDataTemplate">
+            <Grid
+                Padding="-10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="48" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="48" />
+                </Grid.RowDefinitions>
+                <SymbolIcon
+                    Symbol="{Binding Symbol}" />
+                <TextBlock
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Text="{Binding Caption}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="48" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="48" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup 
+                x:Name="VisualStateGroup">
+                <VisualState
+                    x:Name="VisualStateMin0">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger 
+                            MinWindowWidth="1"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_splitView.DisplayMode"
+                            Value="Overlay" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState
+                    x:Name="VisualStateMin320">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger
+                            MinWindowWidth="548" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_splitView.DisplayMode"
+                            Value="CompactOverlay" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <StackPanel
+            Orientation="Horizontal">
+            <Button
+                x:Name="_hamburgerButton"
+                FontFamily="Segoe MDL2 Assets"
+                Foreground="White"
+                Content="&#xE700;"
+                Width="50"
+                Height="50"
+                VerticalAlignment="Top"
+                Click="_hamburgerButton_Click" />
+
+        </StackPanel>
+
+        <SplitView
+            x:Name="_splitView"
+            DisplayMode="CompactOverlay"
+            IsPaneOpen="False"
+            Background="LightGray"
+            CompactPaneLength="48"
+            OpenPaneLength="170"
+            Grid.Row="1"
+            Grid.ColumnSpan="2">
+
+            <SplitView.Pane>
+                <Grid
+                    Background="#FF2B2B2B">
+                    <StackPanel
+                        VerticalAlignment="Top">
+                        <ListBox
+                            x:Name="_mainMenu"
+                            Background="#FF2B2B2B"
+                            Foreground="LightGray"
+                            ItemsSource="{Binding Samples, Source={StaticResource MainViewModel}}"
+                            SelectionChanged="_mainMenu_SelectionChanged"
+                            ItemTemplate="{StaticResource MenuItemDataTemplate}" />
+
+                    </StackPanel>
+
+                </Grid>
+            </SplitView.Pane>
+
+            <Grid>
+                <Frame
+                    x:Name="_rootFrame" />
+            </Grid>
+
+        </SplitView>
+
+        <Grid
+            Grid.Column="1"
+            Background="#FFF2F2F2">
+
+            <StackPanel
+                Orientation="Horizontal">
+
+                <Button
+                    x:Name="_backButton"
+                    Click="_backButton_Click"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0A6;"
+                    Width="50"
+                    Height="50"
+                    Background="Transparent"
+                    Visibility="{Binding BackButtonVisibility}" />
+
+                <TextBlock
+                    x:Name="_currentPageTitle"
+                    Grid.Column="1"
+                    Text="{Binding PageHeader, Source={StaticResource MainViewModel}}"
+                    Margin="12,0,0,0"
+                    FontSize="20"
+                    VerticalAlignment="Center" />
+
+            </StackPanel>
+
+            <StackPanel
+                x:Name="_searchbox"
+                Orientation="Horizontal"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0,0,16,0">
+                <TextBlock
+                    Text="Suche"
+                    VerticalAlignment="Center"
+                    Margin="4" />
+                <TextBox
+                    VerticalAlignment="Center"
+                    Width="200" />
+                <SymbolIcon
+                    Margin="8,0,0,0"
+                    Symbol="find"
+                    x:Name="_search" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
