@@ -104,6 +104,9 @@
     <Compile Include="CustomTrigger\InteractionModeTrigger.cs" />
     <Compile Include="CustomTrigger\NetworkAvailableStateTrigger.cs" />
     <Compile Include="CustomTrigger\OrientationTrigger.cs" />
+    <Compile Include="Dialogs\AboutDialog.xaml.cs">
+      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\MenuAttribute.cs" />
     <Compile Include="Helper\SampleDefinition.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -115,6 +118,9 @@
     </Compile>
     <Compile Include="Samples\AdaptiveUiSample.xaml.cs">
       <DependentUpon>AdaptiveUiSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ContentDialogSample.xaml.cs">
+      <DependentUpon>ContentDialogSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\CustomTriggerSample.xaml.cs">
       <DependentUpon>CustomTriggerSample.xaml</DependentUpon>
@@ -142,6 +148,9 @@
     </Compile>
     <Compile Include="Samples\VisualStateSample.xaml.cs">
       <DependentUpon>VisualStateSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\WrapGridSample.xaml.cs">
+      <DependentUpon>WrapGridSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
@@ -171,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Dialogs\AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -180,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\AdaptiveUiSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ContentDialogSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +233,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\VisualStateSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\WrapGridSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

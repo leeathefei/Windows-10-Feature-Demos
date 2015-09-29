@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows10FeatureDemos.Helper;
 using Windows10FeatureDemos.Views;
@@ -71,5 +72,24 @@ namespace Windows10FeatureDemos.ViewModels
         }
 
         private List<SampleDefinition> sampleHistory = new List<SampleDefinition>();
+
+        public void GoBack()
+        {
+            if (RootFrame.CanGoBack)
+            {
+                RootFrame.GoBack();
+            }
+
+            sampleHistory.RemoveAt(sampleHistory.Count - 1);
+            this.PageHeader = sampleHistory[sampleHistory.Count - 1].Caption;
+        }
+
+        private Visibility BackButtonVisibility
+        {
+            get
+            {
+                
+            }
+        }
     }
 }

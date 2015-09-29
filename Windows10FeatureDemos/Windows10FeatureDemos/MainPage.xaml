@@ -138,8 +138,6 @@
                     Click="_backButton_Click"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE0A6;"
-                    Width="50"
-                    Height="50"
                     Background="Transparent"
                     Visibility="{Binding BackButtonVisibility}" />
 
