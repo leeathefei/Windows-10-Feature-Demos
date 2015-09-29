@@ -97,6 +97,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\Bool2VisibilityConverter.cs" />
+    <Compile Include="CustomTrigger\ApiInformationTrigger.cs" />
+    <Compile Include="CustomTrigger\ControlSizeTrigger.cs" />
+    <Compile Include="CustomTrigger\DeviceFamilyTrigger.cs" />
+    <Compile Include="CustomTrigger\InputTypeTrigger.cs" />
+    <Compile Include="CustomTrigger\InteractionModeTrigger.cs" />
+    <Compile Include="CustomTrigger\NetworkAvailableStateTrigger.cs" />
+    <Compile Include="CustomTrigger\OrientationTrigger.cs" />
     <Compile Include="Helper\MenuAttribute.cs" />
     <Compile Include="Helper\SampleDefinition.cs" />
     <Compile Include="MainPage.xaml.cs">

@@ -10,6 +10,15 @@
     d:DesignWidth="400">
 
     <Grid>
+        <StackPanel>
+            <TextBlock Text="DatePicker" />
+            <DatePicker />
+            <TextBlock Text="Flyout" />
+            <Button
+                Content="Open MenuFlyout">
+            </Button>
+            
+        </StackPanel>
 
     </Grid>
 </UserControl>
