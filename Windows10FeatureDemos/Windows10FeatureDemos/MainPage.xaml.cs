@@ -13,11 +13,27 @@ namespace Windows10FeatureDemos
         {
             this.InitializeComponent();
 
+            #region My Init
+
             this.Loaded += (s, e) =>
             {
                 App.MainViewModel.RootFrame = _rootFrame;
                 _rootFrame.Navigate(typeof(StartPage));
             };
+
+            #endregion
+
+            #region System Back Button Features
+
+            Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += (s, e) =>
+            {
+                App.MainViewModel.GoBack();
+                e.Handled = true;
+            };
+
+            #endregion
+
+            #region Request Minimum Size
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(
                 new Size()
@@ -26,7 +42,20 @@ namespace Windows10FeatureDemos
                     Height = 320
                 }
                 );
+
+            #endregion
+
+            #region Customize Split View on Mobile, don't show menu all the time
+
+            if (DeviceFamilyHelper.IsMobile)
+            {
+                _splitView.DisplayMode = SplitViewDisplayMode.Overlay;
+            }
+
+            #endregion
         }
+
+        #region Split View Features
 
         private void _hamburgerButton_Click(object sender, RoutedEventArgs e)
         {
@@ -43,5 +72,7 @@ namespace Windows10FeatureDemos
         {
             App.MainViewModel.GoBack();
         }
+
+        #endregion
     }
 }

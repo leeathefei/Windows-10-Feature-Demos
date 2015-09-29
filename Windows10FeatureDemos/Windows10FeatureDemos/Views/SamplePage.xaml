@@ -17,6 +17,7 @@
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         
         <Border
+            Margin="8"
             x:Name="_placeHolder" />
 
     </Grid>

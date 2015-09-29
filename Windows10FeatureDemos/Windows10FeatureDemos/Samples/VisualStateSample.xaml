@@ -10,7 +10,287 @@
     d:DesignWidth="400">
 
     <Grid>
-        <TextBlock
-            Text="Visual State" />
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup
+                x:Name="ColumnDesigns">
+                <VisualState
+                    x:Name="ThreeColumnsState">
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_3ColumnDesign.Visibility"
+                            Value="Visible" />
+                        <Setter
+                            Target="_2ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                        <Setter
+                            Target="_1ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState
+                    x:Name="TwoColumnsState">
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_3ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                        <Setter
+                            Target="_2ColumnDesign.Visibility"
+                            Value="Visible" />
+                        <Setter
+                            Target="_1ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState
+                    x:Name="OneColumnsState">
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_3ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                        <Setter
+                            Target="_2ColumnDesign.Visibility"
+                            Value="Collapsed" />
+                        <Setter
+                            Target="_1ColumnDesign.Visibility"
+                            Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <!-- 3 Column Design -->
+        <Grid
+            x:Name="_3ColumnDesign">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <RichTextBlock
+                Margin="4"
+                FontSize="24"
+                OverflowContentTarget="{Binding ElementName=_overflow1}"
+                Foreground="Red">
+                <Paragraph>
+                    Every breaking wave on the shore 
+                    Tells the next one there'll be one more 
+                    And every gambler knows that to lose 
+                    Is what you're really there for 
+                    Summer I was fearless
+                    Now I speak into an answer phone
+                    Like every silent leave on the breeze
+                    Winter wouldn't leave it alone 
+                    Alone
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    Every sailor knows that the sea
+                    Is a friend made enemy
+                    And every shipwrecked soul knows what it is
+                    To live without intimacy
+                    
+                    I thought I heard the captain’s voice
+                    It's hard to listen while you preach 
+                    Like every broken wave on the shore
+                    This was as far as I can reach
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    The sea knows where are the rocks
+                    And drowning is no sin
+                    You know where my heart is
+                    The same place that yours has been
+                    And we know the fear to win
+                    And so we end before we begin
+                    Before we begin
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave";
+                </Paragraph>
+            </RichTextBlock>
+            <RichTextBlockOverflow
+                Margin="4"
+                Grid.Column="1"
+                x:Name="_overflow1"
+                OverflowContentTarget="{Binding ElementName=_overflow2}">
+            </RichTextBlockOverflow>
+            <RichTextBlockOverflow
+                Margin="4"
+                Grid.Column="2"
+                x:Name="_overflow2">
+                <RichTextBlockOverflow.OverflowContentTarget>
+                    <RichTextBlockOverflow />
+                </RichTextBlockOverflow.OverflowContentTarget>
+            </RichTextBlockOverflow>
+        </Grid>
+
+        <!-- 2 Column Design -->
+        <Grid
+            x:Name="_2ColumnDesign">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <RichTextBlock
+                Margin="4"
+                FontSize="24"
+                OverflowContentTarget="{Binding ElementName=_overflow3}"
+                Foreground="Red">
+                <Paragraph>
+                    Every breaking wave on the shore 
+                    Tells the next one there'll be one more 
+                    And every gambler knows that to lose 
+                    Is what you're really there for 
+                    Summer I was fearless
+                    Now I speak into an answer phone
+                    Like every silent leave on the breeze
+                    Winter wouldn't leave it alone 
+                    Alone
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    Every sailor knows that the sea
+                    Is a friend made enemy
+                    And every shipwrecked soul knows what it is
+                    To live without intimacy
+                    
+                    I thought I heard the captain’s voice
+                    It's hard to listen while you preach 
+                    Like every broken wave on the shore
+                    This was as far as I can reach
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    The sea knows where are the rocks
+                    And drowning is no sin
+                    You know where my heart is
+                    The same place that yours has been
+                    And we know the fear to win
+                    And so we end before we begin
+                    Before we begin
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave";
+                </Paragraph>
+            </RichTextBlock>
+            <RichTextBlockOverflow
+                Margin="4"
+                Grid.Column="1"
+                x:Name="_overflow3"
+                OverflowContentTarget="{Binding ElementName=_overflow2}">
+            </RichTextBlockOverflow>
+        </Grid>
+        
+        <!-- 1 Column Design -->
+        <Grid
+            x:Name="_1ColumnDesign">
+            <RichTextBlock
+                Margin="4"
+                FontSize="24"
+                Foreground="Red">
+                <Paragraph>
+                    Every breaking wave on the shore 
+                    Tells the next one there'll be one more 
+                    And every gambler knows that to lose 
+                    Is what you're really there for 
+                    Summer I was fearless
+                    Now I speak into an answer phone
+                    Like every silent leave on the breeze
+                    Winter wouldn't leave it alone 
+                    Alone
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    Every sailor knows that the sea
+                    Is a friend made enemy
+                    And every shipwrecked soul knows what it is
+                    To live without intimacy
+                    
+                    I thought I heard the captain’s voice
+                    It's hard to listen while you preach 
+                    Like every broken wave on the shore
+                    This was as far as I can reach
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave
+                    
+                    The sea knows where are the rocks
+                    And drowning is no sin
+                    You know where my heart is
+                    The same place that yours has been
+                    And we know the fear to win
+                    And so we end before we begin
+                    Before we begin
+                    
+                    If you go
+                    If you go your way and I go mine
+                    Are we so
+                    Are we so helpless against the tide
+                    Baby, every dog on the street
+                    Knows that we’re in love with defeat
+                    Are we ready to be swept off our feet
+                    And stop chasing every breaking wave";
+                </Paragraph>
+            </RichTextBlock>
+        </Grid>
+        
     </Grid>
 </UserControl>

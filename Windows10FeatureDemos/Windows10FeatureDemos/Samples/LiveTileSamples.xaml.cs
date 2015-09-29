@@ -3,10 +3,12 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Wrap Grid", Symbol = Symbol.Zoom, Order = 3)]
-    public sealed partial class WrapGridSample : Page
+    [Menu(Caption = "Live Tiles")]
+    public sealed partial class LiveTileSamples : UserControl
     {
-        public WrapGridSample()
+        // TODO: Implement Live Tile Samples
+
+        public LiveTileSamples()
         {
             this.InitializeComponent();
         }

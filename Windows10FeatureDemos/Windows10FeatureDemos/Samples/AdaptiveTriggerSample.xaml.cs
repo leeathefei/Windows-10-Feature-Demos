@@ -3,10 +3,10 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Wrap Grid", Symbol = Symbol.Zoom, Order = 3)]
-    public sealed partial class WrapGridSample : Page
+    [Menu(Caption = "Adaptive Trigger", Symbol = Symbol.Trim, Order = 8)]
+    public sealed partial class AdaptiveTriggerSample : UserControl
     {
-        public WrapGridSample()
+        public AdaptiveTriggerSample()
         {
             this.InitializeComponent();
         }

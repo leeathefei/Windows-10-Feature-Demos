@@ -8,6 +8,47 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ListView>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid
+                        MaximumRowsOrColumns="3" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.Items>
+                <Rectangle
+                    Fill="Blue"
+                    Width="200"
+                    Height="200" />
+                <Ellipse
+                    Fill="Red"
+                    Height="150"
+                    Width="150" />
+                <Rectangle
+                    Fill="Green"
+                    Width="200"
+                    Height="200" />
+                <Ellipse
+                    Fill="Yellow"
+                    Height="150"
+                    Width="150" />
+                <Rectangle
+                    Fill="Blue"
+                    Width="200"
+                    Height="200" />
+                <Ellipse
+                    Fill="Red"
+                    Height="150"
+                    Width="150" />
+                <Rectangle
+                    Fill="Green"
+                    Width="200"
+                    Height="200" />
+                <Ellipse
+                    Fill="Yellow"
+                    Height="150"
+                    Width="150" />
+            </ListView.Items>
+        </ListView>
     </Grid>
 </Page>

@@ -6,11 +6,51 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignHeight="455"
+    d:DesignWidth="551">
 
     <Grid>
-        <TextBlock
-            Text="Relative Panel" />
+        <ListView VerticalAlignment="Stretch">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid
+                        MaximumRowsOrColumns="3" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.Items>
+                <RelativePanel>
+                    <TextBlock
+                        FontSize="40"
+                        Text="First Name"
+                        x:Name="FirstnameLabel" />
+                    <TextBox
+                        FontSize="40"
+                        Width="250"
+                        RelativePanel.Below="FirstnameLabel" />
+                </RelativePanel>
+                <RelativePanel>
+                    <TextBlock
+                        FontSize="40"
+                        Text="Last Name"
+                        x:Name="LastNameLabel" />
+                    <TextBox
+                        FontSize="40"
+                        Width="250"
+                        RelativePanel.Below="LastNameLabel" />
+                </RelativePanel>
+
+                <RelativePanel>
+                    <TextBlock
+                        FontSize="40"
+                        Text="Address"
+                        x:Name="AddressLabel" />
+                    <RichEditBox
+                        FontSize="40"
+                        Width="250"
+                        Height="300"
+                        RelativePanel.Below="AddressLabel" />
+                </RelativePanel>
+            </ListView.Items>
+        </ListView>
     </Grid>
 </UserControl>

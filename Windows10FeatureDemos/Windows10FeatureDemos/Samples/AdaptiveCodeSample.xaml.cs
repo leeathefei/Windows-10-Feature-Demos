@@ -7,7 +7,7 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Adaptive Code", Symbol = Symbol.Character)]
+    [Menu(Caption = "Adaptive Code", Symbol = Symbol.Character, Order = 10)]
     public sealed partial class AdaptiveCodeSample : UserControl
     {
         public AdaptiveCodeSample()
@@ -18,8 +18,6 @@ namespace Windows10FeatureDemos.Samples
             {
                 ReportVisibleBounds();
                 Debug.WriteLine(App.Current);
-
-                //commandBar = App.Current.DebugSettings
             };
 
             Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += MainPage_VisibleBoundsChanged;

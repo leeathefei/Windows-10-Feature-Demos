@@ -96,9 +96,9 @@
                 FontFamily="Segoe MDL2 Assets"
                 Foreground="White"
                 Content="&#xE700;"
-                Width="50"
-                Height="50"
-                VerticalAlignment="Top"
+                Width="48"
+                Height="48"
+                VerticalAlignment="Stretch"
                 Click="_hamburgerButton_Click" />
 
         </StackPanel>

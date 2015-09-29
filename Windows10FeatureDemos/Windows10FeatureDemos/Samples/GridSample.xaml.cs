@@ -3,10 +3,10 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Hamburger", Symbol = Symbol.Admin)]
-    public sealed partial class HamburgerMenuSample : UserControl
+    [Menu(Caption = "Grid", Symbol = Symbol.Audio, Order = 2)]
+    public sealed partial class GridSample : UserControl
     {
-        public HamburgerMenuSample()
+        public GridSample()
         {
             this.InitializeComponent();
         }

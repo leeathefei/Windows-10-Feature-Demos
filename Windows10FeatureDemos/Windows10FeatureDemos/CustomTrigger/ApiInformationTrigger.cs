@@ -15,6 +15,7 @@ namespace Windows10FeatureDemos.CustomTriggers
     {
 
         #region Constructors
+
         /// <summary>
         /// Initializes a new <see cref="ApiInformationTrigger"/> instance.
         /// </summary>
@@ -22,10 +23,11 @@ namespace Windows10FeatureDemos.CustomTriggers
         {
             EvaluateTrigger();
         }
+
         #endregion // Constructors
 
-
         #region Internal Methods
+        
         /// <summary>
         /// Reevaluates the trigger value.
         /// </summary>

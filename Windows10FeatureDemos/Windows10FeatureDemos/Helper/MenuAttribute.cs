@@ -1,17 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
 namespace Windows10FeatureDemos.Helper
 {
     public class MenuAttribute : Attribute
     {
-        private string _caption = "<caption>";
+        
+        private int _order = 999;
 
-        public string Order { get; set; }
+        public int Order
+        {
+            get
+            {
+                return _order;
+            }
+
+            set
+            {
+                _order = value;
+            }
+        }
 
         public Symbol Symbol
         {
@@ -25,6 +33,8 @@ namespace Windows10FeatureDemos.Helper
                 _symbol = value;
             }
         }
+
+        private string _caption = "<caption>";
 
         public string Caption
         {

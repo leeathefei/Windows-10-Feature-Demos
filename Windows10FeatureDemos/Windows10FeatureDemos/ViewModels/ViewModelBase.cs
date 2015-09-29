@@ -17,6 +17,7 @@ namespace Windows10FeatureDemos.ViewModels
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+
         }
     }
 }
