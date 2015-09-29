@@ -1,9 +1,9 @@
 ﻿using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 
-namespace Windows10FeatureDemos.CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
-    class InteractionModeTrigger : StateTriggerBase
+    public class InteractionModeTrigger : StateTriggerBase
     {
         public InteractionModeTrigger()
         {

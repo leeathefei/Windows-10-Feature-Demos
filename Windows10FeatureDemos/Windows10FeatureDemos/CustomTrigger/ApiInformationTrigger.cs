@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml;
 
-namespace CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
     /// <summary>
     /// A trigger that can be used to check for available APIs.

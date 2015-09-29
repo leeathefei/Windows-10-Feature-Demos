@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.Networking.Connectivity;
 using Windows.UI.Xaml;
 
-namespace Windows10FeatureDemos.CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
-	public class NetworkAvailableStateTrigger : StateTriggerBase
+    public class NetworkAvailableStateTrigger : StateTriggerBase
     {
         public NetworkAvailableStateTrigger()
         {

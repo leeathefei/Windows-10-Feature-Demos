@@ -69,6 +69,8 @@ namespace Windows10FeatureDemos.ViewModels
             this.PageHeader = sample.Caption;
 
             RootFrame.Navigate(typeof(SamplePage), sample);
+
+            OnPropertyChanged("BackButtonVisibility");
         }
 
         private List<SampleDefinition> sampleHistory = new List<SampleDefinition>();

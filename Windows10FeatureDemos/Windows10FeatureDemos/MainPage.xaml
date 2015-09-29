@@ -18,7 +18,7 @@
                 Label="appbarbutton" />
         </CommandBar>
     </Page.BottomAppBar>
-    
+
     <Page.Resources>
         <DataTemplate
             x:Key="MenuItemDataTemplate">
@@ -42,16 +42,16 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    
+
     <Grid
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition
                 Width="48" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="48" />
@@ -59,13 +59,13 @@
         </Grid.RowDefinitions>
 
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup 
+            <VisualStateGroup
                 x:Name="VisualStateGroup">
                 <VisualState
                     x:Name="VisualStateMin0">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger 
-                            MinWindowWidth="1"/>
+                        <AdaptiveTrigger
+                            MinWindowWidth="1" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter
@@ -88,7 +88,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
         <StackPanel
             Orientation="Horizontal">
             <Button
@@ -116,8 +116,8 @@
             <SplitView.Pane>
                 <Grid
                     Background="#FF2B2B2B">
-                    <StackPanel
-                        VerticalAlignment="Top">
+                    <ScrollViewer
+                        VerticalAlignment="Stretch">
                         <ListBox
                             x:Name="_mainMenu"
                             Background="#FF2B2B2B"
@@ -125,8 +125,7 @@
                             ItemsSource="{Binding Samples, Source={StaticResource MainViewModel}}"
                             SelectionChanged="_mainMenu_SelectionChanged"
                             ItemTemplate="{StaticResource MenuItemDataTemplate}" />
-
-                    </StackPanel>
+                    </ScrollViewer>
 
                 </Grid>
             </SplitView.Pane>

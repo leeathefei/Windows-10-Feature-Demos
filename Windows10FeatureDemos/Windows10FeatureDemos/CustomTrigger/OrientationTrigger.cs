@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 
-namespace Windows10FeatureDemos.CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
-    class OrientationTrigger : StateTriggerBase
+    public class OrientationTrigger : StateTriggerBase
     {
         public OrientationTrigger()
         {

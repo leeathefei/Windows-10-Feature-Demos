@@ -3,7 +3,7 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Relative Panel", Symbol = Symbol.Admin)]
+    [Menu(Caption = "Hamburger", Symbol = Symbol.Admin)]
     public sealed partial class HamburgerMenuSample : UserControl
     {
         public HamburgerMenuSample()

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
-namespace Windows10FeatureDemos.CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
     public class DeviceFamilyTrigger : StateTriggerBase
     {

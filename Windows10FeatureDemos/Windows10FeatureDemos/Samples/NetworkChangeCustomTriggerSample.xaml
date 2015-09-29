@@ -1,0 +1,52 @@
+﻿<UserControl
+    x:Class="Windows10FeatureDemos.Samples.NetworkChangeCustomTriggerSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Windows10FeatureDemos.Samples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:trigger="using:Windows10FeatureDemos.CustomTriggers"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup
+                x:Name="NetworkVisualStateGroup">
+                <VisualState
+                    x:Name="NetworkAvailable">
+                    <VisualState.StateTriggers>
+                        <trigger:NetworkAvailableStateTrigger
+                            ConnectionState="Connected" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_connectedSymbol.Foreground"
+                            Value="Green" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState
+                    x:Name="NetworkNotAvailable">
+                    <VisualState.StateTriggers>
+                        <trigger:NetworkAvailableStateTrigger
+                            ConnectionState="Disconnected" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter
+                            Target="_connectedSymbol.Foreground"
+                            Value="Red" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <SymbolIcon
+            x:Name="_connectedSymbol"
+            Symbol="Globe"
+            Foreground="Blue" />
+    </Grid>
+    
+    
+</UserControl>

@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Input;
 
-namespace Windows10FeatureDemos.CustomTriggers.Triggers
+namespace Windows10FeatureDemos.CustomTriggers
 {
     public class InputTypeTrigger : StateTriggerBase
     {

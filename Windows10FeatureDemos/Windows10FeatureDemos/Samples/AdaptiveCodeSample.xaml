@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:triggers="using:Windows10FeatureDemos.CustomTriggers.Triggers"
+    xmlns:triggers="using:Windows10FeatureDemos.CustomTriggers"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
@@ -139,6 +139,7 @@
                 Margin="100,100,0,0"
                 FontSize="{StaticResource TextStyleLargeFontSize}" />
         </Grid>
+        
         <StackPanel
             HorizontalAlignment="Left"
             Margin="75,164,0,0"
@@ -163,6 +164,7 @@
                 VerticalAlignment="Stretch"
                 Checked="RadioButton_Checked" />
         </StackPanel>
+        
         <StackPanel
             Margin="75,274,0,0">
             <CheckBox

@@ -141,6 +141,9 @@
     <Compile Include="Samples\MasterDetailSample.xaml.cs">
       <DependentUpon>MasterDetailSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Samples\NetworkChangeCustomTriggerSample.xaml.cs">
+      <DependentUpon>NetworkChangeCustomTriggerSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\RelativePanelSample.xaml.cs">
       <DependentUpon>RelativePanelSample.xaml</DependentUpon>
     </Compile>
@@ -231,6 +234,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\MasterDetailSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\NetworkChangeCustomTriggerSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
