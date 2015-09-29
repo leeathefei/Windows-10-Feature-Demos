@@ -1,7 +1,6 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System;
+using Windows.UI.Xaml.Controls;
 using Windows10FeatureDemos.Helper;
-
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace Windows10FeatureDemos.Samples
 {
@@ -11,6 +10,20 @@ namespace Windows10FeatureDemos.Samples
         public DeviceFamilySample()
         {
             this.InitializeComponent();
+
+            GetDeviceFamily();
+        }
+
+        private void GetDeviceFamily()
+        {
+            var d = Windows
+                .ApplicationModel
+                .Resources
+                .Core
+                .ResourceContext
+                .GetForCurrentView()
+                .QualifierValues["DeviceFamily"];
+            _deviceFamily.Text = d;
         }
     }
 }

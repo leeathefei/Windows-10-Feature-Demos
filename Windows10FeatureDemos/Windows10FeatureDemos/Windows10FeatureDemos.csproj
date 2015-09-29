@@ -109,11 +109,17 @@
     <Compile Include="Samples\AdaptiveUiSample.xaml.cs">
       <DependentUpon>AdaptiveUiSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Samples\CustomTriggerSample.xaml.cs">
+      <DependentUpon>CustomTriggerSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\DeviceFamilySample.xaml.cs">
       <DependentUpon>DeviceFamilySample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\HamburgerMenuSample.xaml.cs">
       <DependentUpon>HamburgerMenuSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MasterDetailSample.xaml.cs">
+      <DependentUpon>MasterDetailSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\RelativePanelSample.xaml.cs">
       <DependentUpon>RelativePanelSample.xaml</DependentUpon>
@@ -123,6 +129,9 @@
     </Compile>
     <Compile Include="Samples\TabletModeSample.xaml.cs">
       <DependentUpon>TabletModeSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\TailoredViewsSample.xaml.cs">
+      <DependentUpon>TailoredViewsSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\VisualStateSample.xaml.cs">
       <DependentUpon>VisualStateSample.xaml</DependentUpon>
@@ -167,11 +176,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Samples\CustomTriggerSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Samples\DeviceFamilySample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\HamburgerMenuSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MasterDetailSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\TabletModeSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\TailoredViewsSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

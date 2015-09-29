@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="Windows10FeatureDemos.Samples.DeviceFamilySample"
+    x:Class="Windows10FeatureDemos.Samples.CustomTriggerSample"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Windows10FeatureDemos.Samples"
@@ -10,10 +10,6 @@
     d:DesignWidth="400">
 
     <Grid>
-        <StackPanel>
-        <TextBlock
-            Text="Device Family" />
-        <TextBlock x:Name="_deviceFamily" />
-        </StackPanel>
+
     </Grid>
 </UserControl>
