@@ -8,8 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock
-            FontSize="42"
-            Text="Hallo Welt"/>
+        <RichTextBlock
+            FontSize="42">
+            <Paragraph>
+                <Run>Hallo Welt</Run>
+                <LineBreak />
+                <Run>This is a Demo App for a lot of Windows 10 Universal App Features.</Run>
+                <LineBreak/>
+                <Run>Feel free to send comments to oliver.scheer@microsoft.com or follow me on Twitter @theoliver</Run>
+            </Paragraph>
+        </RichTextBlock>
     </Grid>
 </Page>

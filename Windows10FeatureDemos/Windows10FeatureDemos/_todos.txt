@@ -1,3 +1,5 @@
 ﻿# Accent Farbe für Hamburger-Button und Co. definieren
 # Beschreibung über Appbar ein und ausblendbar
-# Hub Sample
+# Settings Page
+  - SplitView.DisplayMode einstellbar
+  - Akzentfarbe einstellen könnn

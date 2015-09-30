@@ -132,6 +132,9 @@
     <Compile Include="Samples\ContentDialogSample.xaml.cs">
       <DependentUpon>ContentDialogSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Samples\CortanaSamples.xaml.cs">
+      <DependentUpon>CortanaSamples.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\CustomTriggerSample.xaml.cs">
       <DependentUpon>CustomTriggerSample.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,9 @@
     </Compile>
     <Compile Include="Samples\GridSample.xaml.cs">
       <DependentUpon>GridSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HubSample.xaml.cs">
+      <DependentUpon>HubSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\LiveTileSamples.xaml.cs">
       <DependentUpon>LiveTileSamples.xaml</DependentUpon>
@@ -241,6 +247,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Samples\CortanaSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Samples\CustomTriggerSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -250,6 +260,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\GridSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\HubSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
