@@ -9,14 +9,7 @@
 
     <Page.BottomAppBar>
         <CommandBar
-            x:Name="commandBar">
-            <AppBarButton
-                Icon="Accept"
-                Label="appbarbutton" />
-            <AppBarButton
-                Icon="Cancel"
-                Label="appbarbutton" />
-        </CommandBar>
+            x:Name="commandBar" />
     </Page.BottomAppBar>
 
     <Page.Resources>
@@ -99,7 +92,8 @@
                 Width="48"
                 Height="48"
                 VerticalAlignment="Stretch"
-                Click="_hamburgerButton_Click" />
+                Click="_hamburgerButton_Click"
+                Background="#FFDB4D3E" />
 
         </StackPanel>
 
@@ -164,6 +158,7 @@
 
             </StackPanel>
 
+            <!--
             <StackPanel
                 x:Name="_searchbox"
                 Orientation="Horizontal"
@@ -182,7 +177,8 @@
                     Symbol="find"
                     x:Name="_search" />
             </StackPanel>
-
+            -->
+            
         </Grid>
     </Grid>
 </Page>

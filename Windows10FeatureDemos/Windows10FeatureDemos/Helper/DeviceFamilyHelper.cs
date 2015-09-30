@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Windows10FeatureDemos.Helper
+﻿namespace Windows10FeatureDemos.Helper
 {
     public class DeviceFamilyHelper
     {
@@ -16,16 +10,12 @@ namespace Windows10FeatureDemos.Helper
             {
                 if (_deviceFamily == null)
                 {
-                    _deviceFamily = Windows
-                        .ApplicationModel
-                        .Resources
-                        .Core
+                    _deviceFamily = Windows.ApplicationModel.Resources.Core
                         .ResourceContext
-                        .GetForCurrentView().QualifierValues["DeviceFamily"];
+                        .GetForCurrentView()
+                        .QualifierValues["DeviceFamily"];
                 }
                 return _deviceFamily;
-
-                // Results: Desktop, Mobile, ....
             }
         }
 

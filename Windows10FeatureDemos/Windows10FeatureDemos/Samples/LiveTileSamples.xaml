@@ -10,6 +10,10 @@
     d:DesignWidth="400">
 
     <Grid>
+        <StackPanel>
+            <Button x:Name="_updateLiveTile" Content="Update Live Tile" Click="_updateLiveTile_Click"/>
+            <Button x:Name="_createSecondaryLiveTile" Content="Create Secondary Tile" Click="_createSecondaryLiveTile_Click" />
+        </StackPanel>
 
     </Grid>
 </UserControl>

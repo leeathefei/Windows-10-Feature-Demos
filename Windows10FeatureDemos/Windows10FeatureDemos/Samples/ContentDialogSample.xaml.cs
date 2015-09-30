@@ -6,7 +6,8 @@ using Windows10FeatureDemos.Helper;
 
 namespace Windows10FeatureDemos.Samples
 {
-    [Menu(Caption = "Content Dialog", Symbol = Symbol.Directions)]
+    [Menu(Caption = "Content Dialog"
+        , Symbol = Symbol.AlignCenter, Order = 10)]
     public sealed partial class ContentDialogSample : UserControl
     {
         public ContentDialogSample()
@@ -27,6 +28,23 @@ namespace Windows10FeatureDemos.Samples
             {
                 // Cancel Pressed 
             }
+        }
+
+        private async void Button_Fullscreen_Click(object sender, RoutedEventArgs e)
+        {
+            AboutDialog aboutDialog = new AboutDialog();
+            aboutDialog.FullSizeDesired = true;
+            ContentDialogResult result = await aboutDialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                // Close pressed
+            }
+            else if (result == ContentDialogResult.Secondary)
+            {
+                // Cancel Pressed 
+            }
+
         }
     }
 }
