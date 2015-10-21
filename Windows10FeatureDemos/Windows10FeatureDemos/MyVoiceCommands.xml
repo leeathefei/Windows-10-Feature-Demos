@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+
+    <CommandSet xml:lang="de-de" Name="UniversalAppCommandSet_de-de">
+
+    <CommandPrefix> Hey Cortana, </CommandPrefix>
+    <Example> Hey Cortana, </Example>
+
+    <!--<Command Name="chitChatTellAJoke">
+      <Example>erzähl mir einen witz</Example>
+      <ListenFor>erzähl mir einen witz</ListenFor>
+      <Feedback>Soll der Witz jugendfrei sein?</Feedback>
+      <Navigate/>
+    </Command>-->
+
+    <Command Name="endMyPresentation">
+      <Example>Jetzt ist Schluss</Example>
+      <ListenFor>Jetzt ist Schluss</ListenFor>
+      <VoiceCommandService Target="TalkToMeVoiceCommandService"/>
+    </Command>
+
+    
+    <Command Name="bankBalance">
+      <Example>wie hoch ist mein Kontostand?</Example>
+      <ListenFor>wie hoch ist mein kontostand</ListenFor>
+      <Feedback>Einen kleinen Augenblick, ich schau mal nach.</Feedback>
+      <!--<Navigate Target="/Views/BankBalancePage.xaml"/>-->
+      <VoiceCommandService Target="TalkToMeVoiceCommandService"/>
+    </Command>
+
+    <Command Name="whatDoYouThinkAbout">
+      <Example>was hälst du von {name}</Example>
+      <ListenFor>was hältst du von {name}</ListenFor>
+      <ListenFor>wie findest du {name}</ListenFor>
+      <VoiceCommandService Target="TalkToMeVoiceCommandService"/>
+    </Command>
+
+    <Command Name="orderDrinkOrFood">
+      <Example>einen Kaffee bitte</Example>
+      <ListenFor>einen {drinkOrFood} bitte</ListenFor>
+      <ListenFor>ein {drinkOrFood} bitte</ListenFor>
+      <ListenFor>bring mir ein {drinkOrFood} </ListenFor>
+      <ListenFor>bring mir eine {drinkOrFood} </ListenFor>
+      <ListenFor>bring mir einen {drinkOrFood} </ListenFor>
+      <ListenFor>hol mir ein horsd'oeuvre</ListenFor>
+
+      <Feedback>Wird gemacht!</Feedback>
+      <Navigate Target="/Views/OrderPage.xaml"/>
+    </Command>
+
+    <Command Name="birthday">
+      <Example> sing anne ein Lied </Example>
+      <ListenFor> die Anne wird heute älter</ListenFor>
+      <Feedback> Liebe Anne, alles Gute zum Geburtstag. Feier schön und bleib so wie du bist. Schöne Grüße nach Seattle.</Feedback>
+      <Navigate Target="/Views/BirthdayPage.xaml"/>
+    </Command>
+
+    <Command Name="showConversation">
+      <Example>  show my conversation with sam  </Example>
+      <ListenFor > show [my] conversation with {user} </ListenFor>
+      <Feedback> Showing conversation with {user} </Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="user">
+      <Item>Sam</Item>
+      <Item>John</Item>
+    </PhraseList>
+
+    <PhraseList Label="drinkOrFood">
+      <Item>Schnaps</Item>
+      <Item>Bier</Item>
+      <Item>Wein</Item>
+      <Item>Kaffee</Item>
+      <Item>Pizza</Item>
+      <Item>Salat</Item>
+      <Item>Pommes</Item>
+    </PhraseList>
+
+    <PhraseList Label="name">
+      <Item>Oliver</Item>
+      <Item>Dennis</Item>
+      <Item>Holzi</Item>
+      <Item>Markus</Item>
+      <Item>Robert</Item>
+      <Item>Marco</Item>
+      <Item>Anne</Item>
+    </PhraseList>
+
+  </CommandSet>
+
+</VoiceCommands>

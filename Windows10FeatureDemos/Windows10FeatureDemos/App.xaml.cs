@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -29,7 +30,7 @@ namespace Windows10FeatureDemos
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
 #if DEBUG
@@ -70,6 +71,8 @@ namespace Windows10FeatureDemos
             Window.Current.Activate();
 
             MainViewModel = (MainViewModel)Resources["MainViewModel"];
+
+            await RegisterVoiceCommands();
         }
 
         /// <summary>
@@ -94,6 +97,14 @@ namespace Windows10FeatureDemos
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+
+        private static async Task RegisterVoiceCommands()
+        {
+            // Load commands for cortana
+            var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///MyVoiceCommands.xml"));
+            await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(storageFile);
         }
     }
 }
