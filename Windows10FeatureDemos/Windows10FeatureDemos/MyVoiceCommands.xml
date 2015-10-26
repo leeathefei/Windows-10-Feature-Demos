@@ -3,8 +3,8 @@
 
     <CommandSet xml:lang="de-de" Name="UniversalAppCommandSet_de-de">
 
-    <CommandPrefix> Hey Cortana, </CommandPrefix>
-    <Example> Hey Cortana, </Example>
+    <CommandPrefix> Hey Siri, </CommandPrefix>
+    <Example> Hey Siri, </Example>
 
     <!--<Command Name="chitChatTellAJoke">
       <Example>erzähl mir einen witz</Example>
@@ -14,8 +14,8 @@
     </Command>-->
 
     <Command Name="endMyPresentation">
-      <Example>Jetzt ist Schluss</Example>
-      <ListenFor>Jetzt ist Schluss</ListenFor>
+      <Example>Jetzt ist schluss</Example>
+      <ListenFor>Jetzt ist schluss</ListenFor>
       <VoiceCommandService Target="TalkToMeVoiceCommandService"/>
     </Command>
 

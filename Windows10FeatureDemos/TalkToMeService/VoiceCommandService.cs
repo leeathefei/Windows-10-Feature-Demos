@@ -78,7 +78,10 @@ namespace TalkToMeService
         {
             var userMessage = new VoiceCommandUserMessage();
 
-            string message = "Oliver, du solltest langsam zum Schluß kommen. Die Zuschauer brauchen jetzt dringend eine Bio-Pause.";
+            //string message = "Okay Oliver, ich starte jetzt deinen Vortrag und wünsch Dir viel Erfolg.";
+
+            string message = "Oliver! Mein Name ist nicht Siri. Und du solltest mich lieber nicht noch mal so ansprechen, sonst bin ich echt sauer.";
+
             userMessage.SpokenMessage = message;
             userMessage.DisplayMessage = message;
 

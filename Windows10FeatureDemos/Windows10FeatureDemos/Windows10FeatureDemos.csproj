@@ -144,6 +144,9 @@
     <Compile Include="Samples\GridSample.xaml.cs">
       <DependentUpon>GridSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Samples\HowToGetCoordinatesOfTouchPoints.xaml.cs">
+      <DependentUpon>HowToGetCoordinatesOfTouchPoints.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\HubSample.xaml.cs">
       <DependentUpon>HubSample.xaml</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Samples\GridSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\HowToGetCoordinatesOfTouchPoints.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
